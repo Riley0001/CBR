@@ -6,7 +6,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHept
  
     local MainSection = Main:NewSection("Aim")
     
-    MainSection:NewButton("Legit Aimbot", "Safe Legit Aimbot To Make It Look Like Ur Playing legit", function()
+    MainSection:NewButton("Legit Aimbot - x to turn Aim Assist On Or Off", "Safe Legit Aimbot To Make It Look Like Ur Playing legit", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Riley0001/legcbr/main/main'))()
 end)
     MainSection:NewButton("Silent Aim - Will Get You Banned!", "Best", function()
