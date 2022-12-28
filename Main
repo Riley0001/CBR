@@ -443,17 +443,17 @@ local LegOff = Vector3.new(0,3,0)
 for i,v in pairs(game.Players:GetChildren()) do
     local BoxOutline = Drawing.new("Square")
     BoxOutline.Visible = false
-    BoxOutline.Color = Color3.new(0,0,0)
+    BoxOutline.Color = Color3.new(255,0,255)
     BoxOutline.Thickness = 3
     BoxOutline.Transparency = 1
     BoxOutline.Filled = false
  
     local Box = Drawing.new("Square")
     Box.Visible = false
-    Box.Color = Color3.new(255,0,255)
+    Box.Color = Color3.new(0,0,0)
     Box.Thickness = 1
-    Box.Transparency = 1
-    Box.Filled = false
+    Box.Transparency = 0.25
+    Box.Filled = true
  
     function boxesp()
         game:GetService("RunService").RenderStepped:Connect(function()
@@ -566,9 +566,9 @@ _G.TeamCheck = true -- Use True or False to toggle TeamCheck
 for i,v in pairs(game.Players:GetChildren()) do
     local Tracer = Drawing.new("Line")
     Tracer.Visible = false
-    Tracer.Color = Color3.new(1,1,1)
+    Tracer.Color = Color3.new(255,0,255)
     Tracer.Thickness = 1
-    Tracer.Transparency = 1
+    Tracer.Transparency = 0.25
  
     function lineesp()
         game:GetService("RunService").RenderStepped:Connect(function()
