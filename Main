@@ -444,7 +444,7 @@ for i,v in pairs(game.Players:GetChildren()) do
     local BoxOutline = Drawing.new("Square")
     BoxOutline.Visible = false
     BoxOutline.Color = Color3.new(255,0,255)
-    BoxOutline.Thickness = 3
+    BoxOutline.Thickness = 2
     BoxOutline.Transparency = 1
     BoxOutline.Filled = false
  
@@ -468,11 +468,11 @@ for i,v in pairs(game.Players:GetChildren()) do
  
                 if onScreen then
                     BoxOutline.Size = Vector2.new(1000 / RootPosition.Z, HeadPosition.Y - LegPosition.Y)
-                    BoxOutline.Position = Vector2.new(RootPosition.X - BoxOutline.Size.X / 5, RootPosition.Y - BoxOutline.Size.Y / 5)
+                    BoxOutline.Position = Vector2.new(RootPosition.X - BoxOutline.Size.X / 3, RootPosition.Y - BoxOutline.Size.Y / 2)
                     BoxOutline.Visible = true
  
                     Box.Size = Vector2.new(1000 / RootPosition.Z, HeadPosition.Y - LegPosition.Y)
-                    Box.Position = Vector2.new(RootPosition.X - Box.Size.X / 5, RootPosition.Y - Box.Size.Y / 5)
+                    Box.Position = Vector2.new(RootPosition.X - Box.Size.X / 3, RootPosition.Y - Box.Size.Y / 2)
                     Box.Visible = true
  
                     if v.TeamColor == lplr.TeamColor then
@@ -500,16 +500,16 @@ game.Players.PlayerAdded:Connect(function(v)
     local BoxOutline = Drawing.new("Square")
     BoxOutline.Visible = false
     BoxOutline.Color = Color3.new(255,0,255)
-    BoxOutline.Thickness = 3
+    BoxOutline.Thickness = 2
     BoxOutline.Transparency = 1
     BoxOutline.Filled = false
  
     local Box = Drawing.new("Square")
     Box.Visible = false
-    Box.Color = Color3.new(255,0,255)
+    Box.Color = Color3.new(0,0,0)
     Box.Thickness = 1
-    Box.Transparency = 1
-    Box.Filled = false
+    Box.Transparency = 0.25
+    Box.Filled = true
  
     function boxesp()
         game:GetService("RunService").RenderStepped:Connect(function()
@@ -524,11 +524,11 @@ game.Players.PlayerAdded:Connect(function(v)
  
                 if onScreen then
                     BoxOutline.Size = Vector2.new(1000 / RootPosition.Z, HeadPosition.Y - LegPosition.Y)
-                    BoxOutline.Position = Vector2.new(RootPosition.X - BoxOutline.Size.X / 5, RootPosition.Y - BoxOutline.Size.Y / 5)
+                    BoxOutline.Position = Vector2.new(RootPosition.X - BoxOutline.Size.X / 3, RootPosition.Y - BoxOutline.Size.Y / 2)
                     BoxOutline.Visible = true
  
                     Box.Size = Vector2.new(1000 / RootPosition.Z, HeadPosition.Y - LegPosition.Y)
-                    Box.Position = Vector2.new(RootPosition.X - Box.Size.X / 5, RootPosition.Y - Box.Size.Y / 5)
+                    Box.Position = Vector2.new(RootPosition.X - Box.Size.X / 3, RootPosition.Y - Box.Size.Y / 2)
                     Box.Visible = true
  
                     if v.TeamColor == lplr.TeamColor then
