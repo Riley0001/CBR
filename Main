@@ -468,11 +468,11 @@ for i,v in pairs(game.Players:GetChildren()) do
  
                 if onScreen then
                     BoxOutline.Size = Vector2.new(1000 / RootPosition.Z, HeadPosition.Y - LegPosition.Y)
-                    BoxOutline.Position = Vector2.new(RootPosition.X - BoxOutline.Size.X / 2, RootPosition.Y - BoxOutline.Size.Y / 2)
+                    BoxOutline.Position = Vector2.new(RootPosition.X - BoxOutline.Size.X / 5, RootPosition.Y - BoxOutline.Size.Y / 5)
                     BoxOutline.Visible = true
  
                     Box.Size = Vector2.new(1000 / RootPosition.Z, HeadPosition.Y - LegPosition.Y)
-                    Box.Position = Vector2.new(RootPosition.X - Box.Size.X / 2, RootPosition.Y - Box.Size.Y / 2)
+                    Box.Position = Vector2.new(RootPosition.X - Box.Size.X / 5, RootPosition.Y - Box.Size.Y / 5)
                     Box.Visible = true
  
                     if v.TeamColor == lplr.TeamColor then
