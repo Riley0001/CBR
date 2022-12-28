@@ -4,10 +4,11 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHept
     -- MAIN
     local Main = Window:NewTab("Main")
  
- 
     local MainSection = Main:NewSection("Aim")
- 
-    MainSection:NewButton("UD AIMBOT In Premium Version")
+    
+    MainSection:NewButton("Legit Aimbot", "Safe Legit Aimbot To Make It Look Like Ur Playing legit", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Riley0001/legcbr/main/main'))()
+end)
     MainSection:NewButton("Silent Aim - Will Get You Banned!", "Best", function()
     
 function getplrsname()
@@ -630,7 +631,7 @@ game.Players.PlayerAdded:Connect(function(v)
     coroutine.wrap(lineesp)()
 end)
     end)
- 
+
  	local Unlockall = Window:NewTab("Unlock ALL")
     local UnlockallSection = Unlockall:NewSection("Made By rmg#3285 DM Me For Status Updates")
  
