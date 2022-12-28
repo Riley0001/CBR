@@ -5,10 +5,10 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHept
     local Main = Window:NewTab("Main")
  
  
-    local MainSection = Main:NewSection("Silent Aim - Will Get You Banned!")
+    local MainSection = Main:NewSection("Aim")
  
     MainSection:NewButton("UD AIMBOT In Premium Version")
-    MainSection:NewButton("Silent Aim", "Best", function()
+    MainSection:NewButton("Silent Aim - Will Get You Banned!", "Best", function()
     
 function getplrsname()
 for i,v in pairs(game:GetChildren()) do
