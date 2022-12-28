@@ -1,230 +1,75 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-    local Window = Library.CreateLib("dvixded.tk - CBR v2", "DarkTheme")
- 
-    -- MAIN
-    local Main = Window:NewTab("Main")
- 
-    local MainSection = Main:NewSection("Aim")
-    
-    MainSection:NewButton("Legit Aimbot - x to turn Aim Assist On Or Off", "Safe Legit Aimbot To Make It Look Like Ur Playing legit", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Riley0001/legcbr/main/main'))()
-end)
- 
-        local MainSection = Main:NewSection("Esp")
- 
- 
-    MainSection:NewButton("Box Esp", "Made By rmg#3285", function()
- 
-local lplr = game.Players.LocalPlayer
-local camera = game:GetService("Workspace").CurrentCamera
-local CurrentCamera = workspace.CurrentCamera
-local worldToViewportPoint = CurrentCamera.worldToViewportPoint
- 
-local HeadOff = Vector3.new(0, 0.5, 0)
-local LegOff = Vector3.new(0,3,0)
- 
-for i,v in pairs(game.Players:GetChildren()) do
-    local BoxOutline = Drawing.new("Square")
-    BoxOutline.Visible = false
-    BoxOutline.Color = Color3.new(255,0,255)
-    BoxOutline.Thickness = 2
-    BoxOutline.Transparency = 1
-    BoxOutline.Filled = false
- 
-    local Box = Drawing.new("Square")
-    Box.Visible = false
-    Box.Color = Color3.new(0,0,0)
-    Box.Thickness = 1
-    Box.Transparency = 0.25
-    Box.Filled = true
- 
-    function boxesp()
-        game:GetService("RunService").RenderStepped:Connect(function()
-            if v.Character ~= nil and v.Character:FindFirstChild("Humanoid") ~= nil and v.Character:FindFirstChild("HumanoidRootPart") ~= nil and v ~= lplr and v.Character.Humanoid.Health > 0 then
-                local Vector, onScreen = camera:worldToViewportPoint(v.Character.HumanoidRootPart.Position)
- 
-                local RootPart = v.Character.HumanoidRootPart
-                local Head = v.Character.Head
-                local RootPosition, RootVis = worldToViewportPoint(CurrentCamera, RootPart.Position)
-                local HeadPosition = worldToViewportPoint(CurrentCamera, Head.Position + HeadOff)
-                local LegPosition = worldToViewportPoint(CurrentCamera, RootPart.Position - LegOff)
- 
-                if onScreen then
-                    BoxOutline.Size = Vector2.new(1000 / RootPosition.Z, HeadPosition.Y - LegPosition.Y)
-                    BoxOutline.Position = Vector2.new(RootPosition.X - BoxOutline.Size.X / 3, RootPosition.Y - BoxOutline.Size.Y / 2)
-                    BoxOutline.Visible = true
- 
-                    Box.Size = Vector2.new(1000 / RootPosition.Z, HeadPosition.Y - LegPosition.Y)
-                    Box.Position = Vector2.new(RootPosition.X - Box.Size.X / 3, RootPosition.Y - Box.Size.Y / 2)
-                    Box.Visible = true
- 
-                    if v.TeamColor == lplr.TeamColor then
-                        BoxOutline.Visible = false
-                        Box.Visible = false
-                    else
-                        BoxOutline.Visible = true
-                        Box.Visible = true
-                    end
- 
-                else
-                    BoxOutline.Visible = false
-                    Box.Visible = false
-                end
-            else
-                BoxOutline.Visible = false
-                Box.Visible = false
-            end
-        end)
-    end
-    coroutine.wrap(boxesp)()
-end
- 
-game.Players.PlayerAdded:Connect(function(v)
-    local BoxOutline = Drawing.new("Square")
-    BoxOutline.Visible = false
-    BoxOutline.Color = Color3.new(255,0,255)
-    BoxOutline.Thickness = 2
-    BoxOutline.Transparency = 1
-    BoxOutline.Filled = false
- 
-    local Box = Drawing.new("Square")
-    Box.Visible = false
-    Box.Color = Color3.new(0,0,0)
-    Box.Thickness = 1
-    Box.Transparency = 0.25
-    Box.Filled = true
- 
-    function boxesp()
-        game:GetService("RunService").RenderStepped:Connect(function()
-            if v.Character ~= nil and v.Character:FindFirstChild("Humanoid") ~= nil and v.Character:FindFirstChild("HumanoidRootPart") ~= nil and v ~= lplr and v.Character.Humanoid.Health > 0 then
-                local Vector, onScreen = camera:worldToViewportPoint(v.Character.HumanoidRootPart.Position)
- 
-                local RootPart = v.Character.HumanoidRootPart
-                local Head = v.Character.Head
-                local RootPosition, RootVis = worldToViewportPoint(CurrentCamera, RootPart.Position)
-                local HeadPosition = worldToViewportPoint(CurrentCamera, Head.Position + HeadOff)
-                local LegPosition = worldToViewportPoint(CurrentCamera, RootPart.Position - LegOff)
- 
-                if onScreen then
-                    BoxOutline.Size = Vector2.new(1000 / RootPosition.Z, HeadPosition.Y - LegPosition.Y)
-                    BoxOutline.Position = Vector2.new(RootPosition.X - BoxOutline.Size.X / 3, RootPosition.Y - BoxOutline.Size.Y / 2)
-                    BoxOutline.Visible = true
- 
-                    Box.Size = Vector2.new(1000 / RootPosition.Z, HeadPosition.Y - LegPosition.Y)
-                    Box.Position = Vector2.new(RootPosition.X - Box.Size.X / 3, RootPosition.Y - Box.Size.Y / 2)
-                    Box.Visible = true
- 
-                    if v.TeamColor == lplr.TeamColor then
-                        BoxOutline.Visible = false
-                        Box.Visible = false
-                    else
-                        BoxOutline.Visible = true
-                        Box.Visible = true
-                    end
- 
-                else
-                    BoxOutline.Visible = false
-                    Box.Visible = false
-                end
-            else
-                BoxOutline.Visible = false
-                Box.Visible = false
-            end
-        end)
-    end
-    coroutine.wrap(boxesp)()
-end)
- 
----Created By 0x83
-    end)
- 
-    MainSection:NewButton("Tracer Esp", "Line Esp", function()
-        local lplr = game.Players.LocalPlayer
-local camera = game:GetService("Workspace").CurrentCamera
-local CurrentCamera = workspace.CurrentCamera
-local worldToViewportPoint = CurrentCamera.worldToViewportPoint
- 
-_G.TeamCheck = true -- Use True or False to toggle TeamCheck
- 
-for i,v in pairs(game.Players:GetChildren()) do
-    local Tracer = Drawing.new("Line")
-    Tracer.Visible = false
-    Tracer.Color = Color3.new(255,0,255)
-    Tracer.Thickness = 1
-    Tracer.Transparency = 0.25
- 
-    function lineesp()
-        game:GetService("RunService").RenderStepped:Connect(function()
-            if v.Character ~= nil and v.Character:FindFirstChild("Humanoid") ~= nil and v.Character:FindFirstChild("HumanoidRootPart") ~= nil and v ~= lplr and v.Character.Humanoid.Health > 0 then
-                local Vector, OnScreen = camera:worldToViewportPoint(v.Character.HumanoidRootPart.Position)
- 
-                if OnScreen then
-                    Tracer.From = Vector2.new(camera.ViewportSize.X / 2, camera.ViewportSize.Y / 1)
-                    Tracer.To = Vector2.new(Vector.X, Vector.Y)
- 
-                    if _G.TeamCheck and v.TeamColor == lplr.TeamColor then
-                        --//Teammates
-                        Tracer.Visible = false
-                    else
-                        --//Enemies
-                        Tracer.Visible = true
-                    end
-                else
-                    Tracer.Visible = false
-                end
-            else
-                Tracer.Visible = false
-            end
-        end)
-    end
-    coroutine.wrap(lineesp)()
-end
- 
-game.Players.PlayerAdded:Connect(function(v)
-    local Tracer = Drawing.new("Line")
-    Tracer.Visible = false
-    Tracer.Color = Color3.new(255,0,255)
-    Tracer.Thickness = 1
-    Tracer.Transparency = 0.25
- 
-    function lineesp()
-        game:GetService("RunService").RenderStepped:Connect(function()
-            if v.Character ~= nil and v.Character:FindFirstChild("Humanoid") ~= nil and v.Character:FindFirstChild("HumanoidRootPart") ~= nil and v ~= lplr and v.Character.Humanoid.Health > 0 then
-                local Vector, OnScreen = camera:worldToViewportPoint(v.Character.HumanoidRootPart.Position)
- 
-                if OnScreen then
-                    Tracer.From = Vector2.new(camera.ViewportSize.X / 2, camera.ViewportSize.Y / 1)
-                    Tracer.To = Vector2.new(Vector.X, Vector.Y)
- 
-                    if _G.TeamCheck and v.TeamColor == lplr.TeamColor then
-                        --//Teammates
-                        Tracer.Visible = false
-                    else
-                        --//Enemies
-                        Tracer.Visible = true
-                    end
-                else
-                    Tracer.Visible = false
-                end
-            else
-                Tracer.Visible = false
-            end
-        end)
-    end
-    coroutine.wrap(lineesp)()
-end)
-    end)
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
 
- 	local Unlockall = Window:NewTab("Unlock ALL")
-    local UnlockallSection = Unlockall:NewSection("Made By rmg#3285 DM Me For Status Updates")
- 
-UnlockallSection:NewButton("Press To Unlock ALL - Its Not Permanent", "ButtonInfo", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Riley0001/ALXM/main/MAIN'))()
-end)
-
-	local Settings = Window:NewTab("Settings And Credits")
-    local SettingsSection = Settings:NewSection("Made By rmg#3285 DM Me For Status Updates")
- 
-SettingsSection:NewKeybind("KeybindText", "KeybindInfo", Enum.KeyCode.RightShift, function()
-	Library:ToggleUI()
-end)
+local Window = Rayfield:CreateWindow({
+	Name = "dvixded.tk - CBR Rewrite",
+	LoadingTitle = "Bypassing Anti Cheat",
+	LoadingSubtitle = "dvixded.tk - CBR Rewrite",
+	ConfigurationSaving = {
+		Enabled = true,
+		FolderName = "dvixded", -- Create a custom folder for your hub/game
+		FileName = "config"
+	},
+        Discord = {
+        	Enabled = true,
+        	Invite = "be7vu6GGWS", -- The Discord invite code, do not include discord.gg/
+        	RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+        },
+	KeySystem = true, -- Set this to true to use our key system
+	KeySettings = {
+		Title = "dvixded.tk",
+		Subtitle = "Key System",
+		Note = "Key Here .gg/be7vu6GGWS Key Changes Every Day!",
+		FileName = "DvixdedKey",
+		SaveKey = true,
+		GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+		Key = "759445c7-051b-4556-93d6-3ee2b7b81f86"
+	}
+})
+local Aim = Window:CreateTab("Aimbot")
+local Button = Aim:CreateButton({
+	Name = "Aim Assist - z to toggle on/off",
+	Callback = function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/Riley0001/legcbr/main/main'))()
+	end,
+})
+local Button = Aim:CreateButton({
+	Name = "Aimbot - Rage - Keybind: RightClick",
+	Callback = function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/ExloiterRiley/aim/main/main'))()
+	end,
+})
+local Button = Aim:CreateButton({
+	Name = "Aimbot - legit - Keybind: RightClick (COMING SOON)",
+	Callback = function()
+		loadstring(game:HttpGet(''))()
+	end,
+})
+local Visuals = Window:CreateTab("Visuals")
+local Button = Visuals:CreateButton({
+	Name = "Chams - On - For Counter Blox: Remastered",
+	Callback = function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/Riley0001/chams/main/on'))()	-- The function that takes place when the button is pressed
+	end,
+})
+local Button = Visuals:CreateButton({
+	Name = "Chams - Off - For Counter Blox: Remastered",
+	Callback = function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/Riley0001/chamss/main/off'))()	-- The function that takes place when the button is pressed
+	end,
+})
+local Button = Visuals:CreateButton({
+	Name = "Box ESP - For Counter Blox: Reimagined",
+	Callback = function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/Riley0001/espx/main/xxx'))()	-- The function that takes place when the button is pressed
+	end,
+})
+local UnlockAll = Window:CreateTab("Unlock Tool")
+local Button = UnlockAll:CreateButton({
+	Name = "Unlock All",
+	Callback = function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/Riley0001/unlock/main/main'))()	-- The function that takes place when the button is pressed
+	end,
+})
+local Credits = Window:CreateTab("Credits")
+local Paragraph = Credits:CreateParagraph({Title = "Creator", Content = "Entire Script Rewrite by rmg#3285                                                                                              (no skidded things on this gui apart from the unlock all which I found from the synapse discord server)"})
+local Paragraph = Credits:CreateParagraph({Title = "Website", Content = "https://dvixded.tk"})
