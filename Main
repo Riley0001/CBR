@@ -22,7 +22,7 @@ local Window = Rayfield:CreateWindow({
 		FileName = "DvixdedKey",
 		SaveKey = true,
 		GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-		Key = "759445c7-051b-4556-93d6-3ee2b7b81f86"
+		Key = "759445c7-6969-4556-93d6-3ee2b7b81f86"
 	}
 })
 local Aim = Window:CreateTab("Aimbot")
