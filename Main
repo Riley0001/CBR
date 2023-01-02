@@ -27,7 +27,7 @@ local Window = Rayfield:CreateWindow({
 })
 local Aim = Window:CreateTab("Aimbot")
 local Button = Aim:CreateButton({
-	Name = "Aim Assist - z to toggle on/off",
+	Name = "Aim Assist - t to toggle on/off",
 	Callback = function()
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/Riley0001/legcbr/main/main'))()
 	end,
