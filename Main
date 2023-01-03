@@ -27,9 +27,9 @@ local Window = Rayfield:CreateWindow({
 })
 local Aim = Window:CreateTab("Aimbot")
 local Button = Aim:CreateButton({
-	Name = "Aim Assist - t to toggle on/off",
+	Name = "Aim Assist - Updating",
 	Callback = function()
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/Riley0001/legcbr/main/main'))()
+		
 	end,
 })
 local Button = Aim:CreateButton({
@@ -65,9 +65,9 @@ local Button = Visuals:CreateButton({
 })
 local UnlockAll = Window:CreateTab("Unlock Tool")
 local Button = UnlockAll:CreateButton({
-	Name = "Unlock All",
+	Name = "Unlock All - Detected! Button No Longer Works",
 	Callback = function()
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/Riley0001/unlock/main/main'))()	-- The function that takes place when the button is pressed
+		-- The function that takes place when the button is pressed
 	end,
 })
 local Credits = Window:CreateTab("Credits")
