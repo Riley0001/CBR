@@ -53,9 +53,15 @@ local Button = UnlockAll:CreateButton({
 	end,
 })
 local Button = UnlockAll:CreateButton({
-	Name = "Skin Changer - Coming Soon",
+	Name = "White Reaver - Must Be Using Default Knife",
 	Callback = function()
-	
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/Riley0001/WhiteRev/main/main'))()
+	end,
+})
+local Button = UnlockAll:CreateButton({
+	Name = "Black Reaver - Must Be Using Default Knife",
+	Callback = function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/Riley0001/BlackRev/main/main'))()
 	end,
 })
 local Credits = Window:CreateTab("Credits")
