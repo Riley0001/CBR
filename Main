@@ -14,60 +14,48 @@ local Window = Rayfield:CreateWindow({
         	Invite = "be7vu6GGWS", -- The Discord invite code, do not include discord.gg/
         	RememberJoins = true -- Set this to false to make them join the discord every time they load it up
         },
-	KeySystem = false, -- Set this to true to use our key system
+	KeySystem = false,
 	KeySettings = {
 		Title = "dvixded.tk",
 		Subtitle = "Key System",
 		Note = "Key Here .gg/be7vu6GGWS Key Changes Every Day!",
 		FileName = "DvixdedKey",
 		SaveKey = true,
-		GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+		GrabKeyFromSite = false, 
 		Key = "759445c7-6969-4556-93d6-3ee2b7b81f86"
 	}
 })
 local Aim = Window:CreateTab("Aimbot")
 local Button = Aim:CreateButton({
-	Name = "Aim Assist - Updating",
+	Name = "Updating Aimbots Sorry",
 	Callback = function()
 		
 	end,
 })
-local Button = Aim:CreateButton({
-	Name = "Aimbot - Rage - Keybind: RightClick",
-	Callback = function()
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/ExloiterRiley/aim/main/main'))()
-	end,
-})
-local Button = Aim:CreateButton({
-	Name = "Aimbot - legit - Keybind: RightClick (COMING SOON)",
-	Callback = function()
-		loadstring(game:HttpGet(''))()
-	end,
-})
 local Visuals = Window:CreateTab("Visuals")
 local Button = Visuals:CreateButton({
-	Name = "Chams - On - For Counter Blox: Remastered",
+	Name = "Box & Skeleton ESP - On - Its Universal ;)",
 	Callback = function()
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/Riley0001/chams/main/on'))()	-- The function that takes place when the button is pressed
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/Riley0001/BoxAndSkell/main/ON'))()
 	end,
 })
 local Button = Visuals:CreateButton({
-	Name = "Chams - Off - For Counter Blox: Remastered",
+	Name = "Box & Skeleton ESP - Off - Its Universal ;)",
 	Callback = function()
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/Riley0001/chamss/main/off'))()	-- The function that takes place when the button is pressed
-	end,
-})
-local Button = Visuals:CreateButton({
-	Name = "Box ESP - For Counter Blox: Reimagined",
-	Callback = function()
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/Riley0001/espx/main/xxx'))()	-- The function that takes place when the button is pressed
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/Riley0001/BoxAndSkel/main/OFF'))()
 	end,
 })
 local UnlockAll = Window:CreateTab("Unlock Tool")
 local Button = UnlockAll:CreateButton({
-	Name = "Unlock All - Detected! Button No Longer Works",
+	Name = "Unlock All - Patched",
 	Callback = function()
-		-- The function that takes place when the button is pressed
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/Riley0001/unlock/main/main'))()
+	end,
+})
+local Button = UnlockAll:CreateButton({
+	Name = "Skin Changer - Coming Soon",
+	Callback = function()
+	
 	end,
 })
 local Credits = Window:CreateTab("Credits")
